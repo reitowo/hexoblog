@@ -1,4 +1,5 @@
 name: CI
+run-name: Generate
 
 # Controls when the workflow will run
 on:
@@ -27,6 +28,6 @@ jobs:
     - run: npm i hexo-cli -g
     - run: hexo generate
     - uses: actions/upload-artifact@v4
-        with:
-          name: public
-          path: public/
+      with:
+        name: public
+        path: public/
