@@ -23,9 +23,9 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
-        node-version: 14
+        node-version: 8
     - run: npm i
-    - run: npm i hexo-cli -g
+    - run: npm i hexo-cli@1.1.0 -g
     - run: hexo generate
     - uses: actions/upload-artifact@v4
       with:
